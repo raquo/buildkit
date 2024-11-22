@@ -11,6 +11,8 @@ ThisBuild / dynver := {
     .mkVersion(out => versionFmt(out, dynverSonatypeSnapshots.value), fallbackVersion(d))
 }
 
+(ThisBuild / versionScheme) := Some("early-semver")
+
 (ThisBuild / scalaVersion) := Versions.Scala_2_12
 
 (ThisBuild / crossScalaVersions) := Seq(
